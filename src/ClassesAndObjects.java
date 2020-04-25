@@ -11,14 +11,20 @@ public class ClassesAndObjects {
         person2.speak();
 
         person1.sayHello(person2);
-
-
+        int year1 = person1.calculateYearsToRetirement();
+        int year2 = person2.calculateYearsToRetirement();
+        System.out.println("У первого человека до пенсии количество лет: " + year1);
+        System.out.println("У второго человека до пенсии количество лет: " + year2);
 
     }
 }
 class Person{
     String name;
     int age;
+
+    int calculateYearsToRetirement(){
+        return 65-age;
+    }
 
     void speak(){
         for (int i=0; i<3; i++)
