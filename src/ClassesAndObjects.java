@@ -1,25 +1,42 @@
+import javax.swing.*;
+
 public class ClassesAndObjects {
     public static void main(String[] args) {
         Person person1 = new Person();
-        person1.setNameAndAge("Роман",50);
+        person1.setName("Какое-то имя");
+        person1.setAge(45);
         person1.speak();
-
-        String s1 = "Вован";
-        Person person2 = new Person();
-        person2.setNameAndAge(s1,20);
-        person2.speak();
-
-        person1.sayHello(person2);
-        int year1 = person1.calculateYearsToRetirement();
-        int year2 = person2.calculateYearsToRetirement();
-        System.out.println("У первого человека до пенсии количество лет: " + year1);
-        System.out.println("У второго человека до пенсии количество лет: " + year2);
-
+        System.out.println(person1.getName());
+        System.out.println(person1.getAge());
+//        person1.setName("");
+        person1.setAge(-2);
     }
 }
 class Person{
-    String name;
-    int age;
+    private String name;
+    private int age;
+
+    void setName(String username){
+        if (username.isEmpty())
+            System.out.println("Ошибка: имя не может быть путсое!!!");
+        else
+        name=username;
+    }
+
+    public String getName(){
+        return name;
+    }
+    void setAge(int userage){
+        if (userage<0)
+            System.out.println("Ошибка, возраст должен быть положительный");
+        else
+            age=userage;
+    }
+
+    public int getAge(){
+        return age;
+    }
+
 
     void setNameAndAge(String username, int userage){
         name=username;
