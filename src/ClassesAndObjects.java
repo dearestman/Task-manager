@@ -10,7 +10,6 @@ public class ClassesAndObjects {
         person2.age = 20;
         System.out.println("Меня зовут " + person2.name + ". И мне уже " + person2.age);
 
-
     }
 }
 class Person{
