@@ -1,30 +1,25 @@
 public class This {
     public static void main(String[] args) {
-        Human human1 = new Human("Dima", 22);
-        Human human2 = new Human();
-        human1.getInfo();
-        human2.getInfo();
-
+        Human h1 = new Human("Dima", 22);
+        Human h2 = new Human("Olya", 22);
+        Human.printNumberOfPeople();
     }
 }
 class Human{
 
-    public Human(){
-        this.name = "Имя по умолчанию";
-        this.age = 0;
-    }
-
     String name;
     int age;
+    private static int countPeople;
+
 
     public Human(String name, int age){
         if (name!="" && age>=0){
             this.name = name;
             this.age = age;
+            countPeople++;
         } else {
             System.out.println("Не правильно указан возвраст или имя!!!");
         }
-
     }
 
 
@@ -46,6 +41,11 @@ class Human{
     public void getInfo(){
         System.out.println("name: " + name + ", age: " + age);
     }
+
+    public static void printNumberOfPeople(){
+        System.out.println("Number of people is " + countPeople);
+    }
+
 
 }
 
