@@ -1,15 +1,15 @@
-import forest.Squirell;
-import forest.Tree;
-import forest.somrthing.SomeClass;
-
-import java.util.Scanner;
-
-
 public class Test {
     public static void main(String[] args) {
-        Tree tree1 = new Tree();
-        Squirell squirell = new Squirell();
-        Scanner scanner = new Scanner(System.in);
-        SomeClass someClass = new SomeClass();
+        Animal animal = new Animal();
+        Dog dog = new Dog();
+        Cat cat = new Cat();
+
+        test(animal);
+        test(dog);
+        test(cat);
+    }
+
+    public static void test(Animal animal){
+        animal.eat();
     }
 }
