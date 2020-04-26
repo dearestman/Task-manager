@@ -1,8 +1,8 @@
 public class This {
     public static void main(String[] args) {
         Human h1 = new Human("Dima", 22);
-        Human h2 = new Human("Olya", 22);
-        Human.printNumberOfPeople();
+
+        System.out.println(h1.toString());
     }
 }
 class Human{
@@ -22,6 +22,10 @@ class Human{
         }
     }
 
+
+    public String toString() {
+        return "возраст: " + name + ", лет: " + age;
+    }
 
     public void setName(String name){
         this.name=name;
