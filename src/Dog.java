@@ -1,4 +1,6 @@
-public class Dog extends Animal{
+import Interfaces.Info;
+
+public class Dog extends Animal {
 
 
     public void eat() {
